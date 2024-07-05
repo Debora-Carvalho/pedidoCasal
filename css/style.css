@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background img {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-proposal {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#proposal_image img {
+    width: 50%;
+}
+
+#proposal_title {
+    font-family: "Playwrite VN", cursive;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+#proposal_subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card-proposal p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.proposal-buttons button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.proposal-buttons button:hover {
+    background-color: #ffafaf;
+}
+
+.hidden {
+    display: none; 
+}
+
+#proposal_return {
+    font-size: 0.9rem;
+    color: #ff6b6b;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer i {
+    color: #ff6b6b;
+}
+
+/*confetes */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 1000; 
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f44336;
+    opacity: 0.9;
+    transform: rotate(45deg);
+    pointer-events: none; 
+    animation: fall 1s ease-out infinite; 
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(45deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(45deg);
+    }
+}
